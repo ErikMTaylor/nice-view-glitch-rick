@@ -31,7 +31,7 @@ void draw_rick_animation(lv_obj_t *canvas) {
     lv_obj_center(art);
 
     lv_animimg_set_src(art, (const void **)anim_imgs, 16);
-    lv_animimg_set_duration(art, CONFIG_NICE_VIEW_GEM_ANIMATION_MS);
+    lv_animimg_set_duration(art, CONFIG_NICE_VIEW_RICK_ANIMATION_MS);
     lv_animimg_set_repeat_count(art, LV_ANIM_REPEAT_INFINITE);
     lv_animimg_start(art);
 #else
