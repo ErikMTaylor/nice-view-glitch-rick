@@ -4,4 +4,4 @@
 #include "util.h"
 #include "screen_peripheral.h"
 
-void draw_animation(lv_obj_t *canvas);
+void draw_gem_animation(lv_obj_t *canvas);

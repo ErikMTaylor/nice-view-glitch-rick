@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <zephyr/kernel.h>
-#include "animation.h"
+#include "gem_animation.h"
 
 LV_IMG_DECLARE(crystal_01);
 LV_IMG_DECLARE(crystal_02);
@@ -25,7 +25,7 @@ const lv_img_dsc_t *anim_imgs[] = {
     &crystal_13, &crystal_14, &crystal_15, &crystal_16,
 };
 
-void draw_animation(lv_obj_t *canvas) {
+void draw_gem_animation(lv_obj_t *canvas) {
 #if IS_ENABLED(CONFIG_NICE_VIEW_GEM_ANIMATION)
     lv_obj_t *art = lv_animimg_create(canvas);
     lv_obj_center(art);
