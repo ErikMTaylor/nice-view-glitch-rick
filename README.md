@@ -21,15 +21,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: nice-view-glitch-rick #new entry
-      url-base: https://github.com/ErikMTaylor/nice-view-glitch-rick #new entry
+    - name: ErikMTaylor #new entry
+      url-base: https://github.com/ErikMTaylor #new entry
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: rick #new entry
-      remote: nice-view-glitch-rick #new entry
+    - name: nice-view-glitch-rick #new entry
+      remote: ErikMTaylor #new entry
       revision: main #new entry
   self:
     path: config
@@ -41,9 +41,9 @@ Now, simply swap out the default nice_view shield on the board for nice_view_gem
 ---
 include:
   - board: nice_nano_v2
-    shield: kyria_left nice_view_adapter rick #updated entry
+    shield: kyria_left nice_view_adapter nice-view-gem #updated entry
   - board: nice_nano_v2
-    shield: kyria_right nice_view_adapter rick #updated entry
+    shield: kyria_right nice_view_adapter nice-view-gem #updated entry
 ```
 
 Finally, make sure to enable the custom status screen in your ZMK configuration:
