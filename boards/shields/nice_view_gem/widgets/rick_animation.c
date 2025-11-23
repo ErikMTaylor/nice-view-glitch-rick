@@ -32,8 +32,8 @@ void draw_rick_animation(lv_obj_t *canvas) {
 
     // Set pivot to center so it rotates around its middle.
     // Adjust these if you know your frame width/height. */
-    lv_obj_set_style_transform_pivot_x(art, 69, LV_PART_MAIN);
-    lv_obj_set_style_transform_pivot_y(art, 68, LV_PART_MAIN);
+    lv_obj_set_style_transform_pivot_x(art, 34.5, LV_PART_MAIN);
+    lv_obj_set_style_transform_pivot_y(art, 34, LV_PART_MAIN);
 
     /* Angle is in 0.1° units: 900 = 90 degrees */
     lv_obj_set_style_transform_angle(art, 900, LV_PART_MAIN);
