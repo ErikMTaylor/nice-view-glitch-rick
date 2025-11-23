@@ -115,6 +115,7 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
     lv_obj_t *middle = lv_canvas_create(widget->obj);
     lv_obj_align(middle, LV_ALIGN_TOP_RIGHT, BUFFER_OFFSET_MIDDLE, 0);
     lv_canvas_set_buffer(middle, widget->cbuf2, BUFFER_SIZE_HEIGHT_MIDDLE, BUFFER_SIZE, LV_IMG_CF_TRUE_COLOR);
+    rotate_canvas(middle, cbuf2);
 
     // lv_obj_t *bottom = lv_canvas_create(widget->obj);
     // lv_obj_align(bottom, LV_ALIGN_TOP_RIGHT, BUFFER_OFFSET_BOTTOM, 0);
