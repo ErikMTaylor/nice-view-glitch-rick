@@ -114,7 +114,7 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
     // Made custom buffer size for middle in util.h to cover rest of the screen.
     lv_obj_t *middle = lv_canvas_create(widget->obj);
     lv_obj_align(middle, LV_ALIGN_TOP_RIGHT, BUFFER_OFFSET_MIDDLE, 0);
-    lv_canvas_set_buffer(middle, widget->cbuf2, BUFFER_SIZE__HEIGHT_MIDDLE, BUFFER_SIZE, LV_IMG_CF_TRUE_COLOR);
+    lv_canvas_set_buffer(middle, widget->cbuf2, BUFFER_SIZE_HEIGHT_MIDDLE, BUFFER_SIZE, LV_IMG_CF_TRUE_COLOR);
 
     // lv_obj_t *bottom = lv_canvas_create(widget->obj);
     // lv_obj_align(bottom, LV_ALIGN_TOP_RIGHT, BUFFER_OFFSET_BOTTOM, 0);
