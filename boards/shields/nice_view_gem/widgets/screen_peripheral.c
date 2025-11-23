@@ -111,6 +111,9 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
     lv_obj_align(top, LV_ALIGN_TOP_RIGHT, 0, 0);
     lv_canvas_set_buffer(top, widget->cbuf, BUFFER_SIZE, BUFFER_SIZE, LV_IMG_CF_TRUE_COLOR);
 
+    lv_color_t c = lv_color_black();
+    lv_canvas_fill_bg(top, c, LV_OPA_COVER);
+
     draw_gem_animation(widget->obj);
 
     sys_slist_append(&widgets, &widget->node);
