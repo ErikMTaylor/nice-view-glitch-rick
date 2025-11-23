@@ -26,6 +26,7 @@ const lv_img_dsc_t *anim_imgs[] = {
 };
 
 void draw_rick_animation(lv_obj_t *canvas) {
+    fill_background(canvas);
 #if IS_ENABLED(CONFIG_NICE_VIEW_RICK_ANIMATION)
     lv_obj_t *art = lv_animimg_create(canvas);
     lv_obj_center(art);
