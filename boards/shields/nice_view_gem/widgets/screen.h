@@ -7,8 +7,8 @@
 struct zmk_widget_screen {
     sys_snode_t node;
     lv_obj_t *obj;
-    lv_color_t cbuf[BUFFER_SIZE_TOP * BUFFER_SIZE];
-    lv_color_t cbuf2[BUFFER_SIZE_MIDDLE * BUFFER_SIZE];
+    lv_color_t cbuf[BUFFER_SIZE_HEIGHT_TOP * BUFFER_SIZE];
+    lv_color_t cbuf2[BUFFER_SIZE_HEIGHT_MIDDLE * BUFFER_SIZE];
     // lv_color_t cbuf3[BUFFER_SIZE_BOTTOM * BUFFER_SIZE];
     struct status_state state;
 };
