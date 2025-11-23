@@ -52,5 +52,6 @@ config NICE_VIEW_WIDGET_STATUS
 
 config NICE_VIEW_WIDGET_INVERTED
     bool "Invert display colors"
+    default y
 
 endif # SHIELD_NICE_VIEW_GEM
