@@ -4,14 +4,12 @@
 #include <zephyr/kernel.h>
 #include "util.h"
 
-#define CANVAS_WIDTH  SCREEN_WIDTH
-#define CANVAS_HEIGHT SCREEN_HEIGHT
-#define CANVAS_PIXELS (CANVAS_WIDTH * CANVAS_HEIGHT)
-
 struct zmk_widget_screen {
     sys_snode_t node;
     lv_obj_t *obj;
-    lv_color_t cbuf[CANVAS_PIXELS];
+    lv_color_t cbuf[BUFFER_SIZE_TOP * BUFFER_SIZE];
+    lv_color_t cbuf2[BUFFER_SIZE_MIDDLE * BUFFER_SIZE];
+    // lv_color_t cbuf3[BUFFER_SIZE_BOTTOM * BUFFER_SIZE];
     struct status_state state;
 };
 
