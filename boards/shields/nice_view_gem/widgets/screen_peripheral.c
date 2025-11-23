@@ -110,9 +110,8 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
     lv_obj_t *top = lv_canvas_create(widget->obj);
     lv_obj_align(top, LV_ALIGN_TOP_RIGHT, 0, 0);
     lv_canvas_set_buffer(top, widget->cbuf, BUFFER_SIZE, BUFFER_SIZE, LV_IMG_CF_TRUE_COLOR);
-
-    lv_color_t c = lv_color_black();
-    lv_canvas_fill_bg(top, c, LV_OPA_COVER);
+    lv_obj_set_style_bg_color(top, lv_color_black(), LV_PART_MAIN);
+    lv_obj_set_style_bg_opa(top, LV_OPA_COVER, LV_PART_MAIN);
 
     draw_gem_animation(widget->obj);
 
