@@ -7,8 +7,10 @@
 #define SCREEN_HEIGHT 160
 
 #define BUFFER_SIZE 68
+#define BUFFER_SIZE_HEIGHT_TOP 44
+#define BUFFER_SIZE_HEIGHT_MIDDLE 116 
 #define BUFFER_OFFSET_MIDDLE -44
-#define BUFFER_OFFSET_BOTTOM -129
+// #define BUFFER_OFFSET_BOTTOM -129
 
 #define LVGL_BACKGROUND                                                                            \
     IS_ENABLED(CONFIG_NICE_VIEW_WIDGET_INVERTED) ? lv_color_black() : lv_color_white()
@@ -23,9 +25,6 @@ struct status_state {
     int active_profile_index;
     bool active_profile_connected;
     bool active_profile_bonded;
-    uint8_t layer_index;
-    const char *layer_label;
-    uint8_t wpm[10];
 #else
     bool connected;
 #endif
