@@ -5,7 +5,6 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include <zmk/event_manager.h>
 #include <zmk/events/battery_state_changed.h>
-#include <zmk/events/ble_active_profile_changed.h>
 #include <zmk/events/endpoint_changed.h>
 #include <zmk/events/usb_conn_state_changed.h>
 #include <zmk/battery.h>
@@ -33,7 +32,7 @@ static void draw_top(lv_obj_t *widget, lv_color_t cbuf[], const struct status_st
     draw_battery_status(canvas, state);
 
     // Rotate for horizontal display
-    // rotate_canvas(canvas, cbuf);
+    rotate_canvas(canvas, cbuf);
 }
 
 /**
