@@ -28,8 +28,7 @@ void fill_background(lv_obj_t *canvas) {
     lv_canvas_draw_rect(canvas, 0, 0, SCREEN_HEIGHT, SCREEN_WIDTH, &rect_black_dsc);
 }
 
-void init_label_dsc(lv_draw_label_dsc_t *label_dsc, lv_color_t color, const lv_font_t *font,
-                    lv_text_align_t align) {
+void init_label_dsc(lv_draw_label_dsc_t *label_dsc, lv_color_t color, const lv_font_t *font, lv_text_align_t align) {
     lv_draw_label_dsc_init(label_dsc);
     label_dsc->color = color;
     label_dsc->font = font;
