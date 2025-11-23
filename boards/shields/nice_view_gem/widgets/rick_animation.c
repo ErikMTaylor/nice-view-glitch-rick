@@ -30,14 +30,6 @@ void draw_rick_animation(lv_obj_t *canvas) {
     lv_obj_t *art = lv_animimg_create(canvas);
     lv_obj_center(art);
 
-    // Set pivot to center so it rotates around its middle.
-    // Adjust these if you know your frame width/height. */
-    lv_obj_set_style_transform_pivot_x(art, 34.5, LV_PART_MAIN);
-    lv_obj_set_style_transform_pivot_y(art, 34, LV_PART_MAIN);
-
-    /* Angle is in 0.1° units: 900 = 90 degrees */
-    lv_obj_set_style_transform_angle(art, 900, LV_PART_MAIN);
-
     lv_animimg_set_src(art, (const void **)anim_imgs, 16);
     lv_animimg_set_duration(art, CONFIG_NICE_VIEW_RICK_ANIMATION_MS);
     lv_animimg_set_repeat_count(art, LV_ANIM_REPEAT_INFINITE);
