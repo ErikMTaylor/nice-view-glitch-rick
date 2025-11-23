@@ -9,7 +9,7 @@ void to_uppercase(char *str) {
 }
 
 void rotate_canvas(lv_obj_t *canvas, lv_color_t cbuf[]) {
-    static lv_color_t cbuf_tmp[BUFFER_SIZE * BUFFER_SIZE];
+    static lv_color_t cbuf_tmp[BUFFER_SIZE_HEIGHT * BUFFER_SIZE_WIDTH];
     memcpy(cbuf_tmp, cbuf, sizeof(cbuf_tmp));
 
     lv_img_dsc_t img;
