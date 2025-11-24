@@ -107,11 +107,11 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
     lv_obj_align(top, LV_ALIGN_TOP_RIGHT, 0, 0);
     lv_canvas_set_buffer(top, widget->cbuf, BUFFER_SIZE, BUFFER_SIZE, LV_IMG_CF_TRUE_COLOR);
 
-    draw_gem_animation(widget->obj);
-
     lv_obj_t *filler = lv_canvas_create(widget->obj);
     lv_obj_align(filler, LV_ALIGN_TOP_RIGHT, -100, 0);
     lv_canvas_set_buffer(filler, widget->cbuf2, BUFFER_SIZE, BUFFER_SIZE, LV_IMG_CF_TRUE_COLOR);
+
+    draw_gem_animation(widget->obj);
 
     sys_slist_append(&widgets, &widget->node);
     widget_battery_status_init();
