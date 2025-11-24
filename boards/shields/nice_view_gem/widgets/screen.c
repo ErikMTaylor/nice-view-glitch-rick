@@ -38,8 +38,7 @@ static void draw_top(lv_obj_t *widget, lv_color_t cbuf[], const struct status_st
  * Battery status
  **/
 
-static void set_battery_status(struct zmk_widget_screen *widget,
-                               struct battery_status_state state) {
+static void set_battery_status(struct zmk_widget_screen *widget, struct battery_status_state state) {
 #if IS_ENABLED(CONFIG_USB_DEVICE_STACK)
     widget->state.charging = state.usb_present;
 #endif /* IS_ENABLED(CONFIG_USB_DEVICE_STACK) */
@@ -64,8 +63,7 @@ static struct battery_status_state battery_status_get_state(const zmk_event_t *e
     };
 }
 
-ZMK_DISPLAY_WIDGET_LISTENER(widget_battery_status, struct battery_status_state,
-                            battery_status_update_cb, battery_status_get_state);
+ZMK_DISPLAY_WIDGET_LISTENER(widget_battery_status, struct battery_status_state, battery_status_update_cb, battery_status_get_state);
 
 ZMK_SUBSCRIPTION(widget_battery_status, zmk_battery_state_changed);
 #if IS_ENABLED(CONFIG_USB_DEVICE_STACK)
@@ -76,8 +74,7 @@ ZMK_SUBSCRIPTION(widget_battery_status, zmk_usb_conn_state_changed);
  * Output status
  **/
 
-static void set_output_status(struct zmk_widget_screen *widget,
-                              const struct output_status_state *state) {
+static void set_output_status(struct zmk_widget_screen *widget, const struct output_status_state *state) {
     widget->state.selected_endpoint = state->selected_endpoint;
     widget->state.active_profile_index = state->active_profile_index;
     widget->state.active_profile_connected = state->active_profile_connected;
@@ -100,8 +97,7 @@ static struct output_status_state output_status_get_state(const zmk_event_t *_eh
     };
 }
 
-ZMK_DISPLAY_WIDGET_LISTENER(widget_output_status, struct output_status_state,
-                            output_status_update_cb, output_status_get_state)
+ZMK_DISPLAY_WIDGET_LISTENER(widget_output_status, struct output_status_state, output_status_update_cb, output_status_get_state)
 ZMK_SUBSCRIPTION(widget_output_status, zmk_endpoint_changed);
 
 #if IS_ENABLED(CONFIG_USB_DEVICE_STACK)
