@@ -115,7 +115,7 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
 
     lv_obj_t *top = lv_canvas_create(widget->obj);
     lv_obj_align(top, LV_ALIGN_TOP_RIGHT, 0, 0);
-    lv_canvas_set_buffer(top, widget->cbuf, 160, BUFFER_SIZE, LV_IMG_CF_TRUE_COLOR);
+    lv_canvas_set_buffer(top, widget->cbuf, BUFFER_SIZE, 160, LV_IMG_CF_TRUE_COLOR);
 
     draw_rick_animation(widget->obj);
 
