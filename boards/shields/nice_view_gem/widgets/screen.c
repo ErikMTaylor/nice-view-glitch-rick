@@ -35,6 +35,22 @@ static void draw_top(lv_obj_t *widget, lv_color_t cbuf[], const struct status_st
     rotate_canvas(canvas, cbuf);
 }
 
+// static void draw_middle(lv_obj_t *widget, lv_color_t cbuf[], const struct status_state *state) {
+//     lv_obj_t *canvas = lv_obj_get_child(widget, 1);
+//     fill_background(canvas);
+
+//     // Rotate for horizontal display
+//     rotate_canvas(canvas, cbuf);
+// }
+
+// static void draw_bottom(lv_obj_t *widget, lv_color_t cbuf[], const struct status_state *state) {
+//     lv_obj_t *canvas = lv_obj_get_child(widget, 2);
+//     fill_background(canvas);
+
+//     // Rotate for horizontal display
+//     rotate_canvas(canvas, cbuf);
+// }
+
 /**
  * Battery status
  **/
@@ -119,7 +135,7 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
 
     lv_obj_t *filler = lv_canvas_create(widget->obj);
     lv_obj_align(filler, LV_ALIGN_TOP_RIGHT, -40, 0);
-    lv_canvas_set_buffer(top, widget->cbuf2, BUFFER_SIZE, BUFFER_SIZE, LV_IMG_CF_TRUE_COLOR);
+    lv_canvas_set_buffer(filler, widget->cbuf2, BUFFER_SIZE, BUFFER_SIZE, LV_IMG_CF_TRUE_COLOR);
 
     draw_rick_animation(widget->obj);
 
